@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		971756E526EB539900A14774 /* RGBAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGBAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		971756E826EB539900A14774 /* RGBAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAppSwiftUIApp.swift; sourceTree = "<group>"; };
-		971756EA26EB539900A14774 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		971756EA26EB539900A14774 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 1; };
 		971756EC26EB539A00A14774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		971756EF26EB539A00A14774 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		971756F126EB539A00A14774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -269,6 +269,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RGBAppSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = A3U43FT35S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RGBAppSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -290,6 +291,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RGBAppSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = A3U43FT35S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = RGBAppSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
