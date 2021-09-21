@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var redSliderValue = Double.random(in: 0...255)
     @State private var greenSliderValue = Double.random(in: 0...255)
     @State private var blueSliderValue = Double.random(in: 0...255)
+   
     
     
     var body: some View {
@@ -40,6 +41,7 @@ struct ValueSettingsStack: View {
     @Binding var value: Double
     @State private var stringEnteredValue = ""
     @State private var alertPresented = false
+    
     let colorSlider: Color
     
     
@@ -51,12 +53,15 @@ struct ValueSettingsStack: View {
             Slider(value: $value, in: 0...255, step: 1)
                     .accentColor(colorSlider)
                 .frame(width: 250)
-            TextField("", value: $value, formatter: NumberFormatter(), onCommit:
-                       {
-                        filterTextfield()
-                       })
+            TextField("", text: $stringEnteredValue, onCommit: filterTextfield)
                 .alert(isPresented: $alertPresented, content: {
                     Alert(title: Text("Wrong Format!"), message: Text("Try again!"))
+                })
+                .onAppear {
+                    stringEnteredValue = "\(lround(value))"
+                }
+                .onChange(of: value, perform: { value in
+                    stringEnteredValue = "\(lround(value))"
                 })
                 .keyboardType(.numbersAndPunctuation)
                 .multilineTextAlignment(.center)
@@ -69,15 +74,13 @@ struct ValueSettingsStack: View {
     
 
     private func filterTextfield() {
-
-        
-        switch value {
-        case ..<0:
-            self.value = 0; alertPresented.toggle()
-        case 0...255:
-            break
-        default:
-            self.value = 255; alertPresented.toggle()
+        if let value = Int(stringEnteredValue),
+           (0...255).contains(value) {
+            self.value = Double(value)
+        } else {
+            alertPresented.toggle()
+            value = 0
+            stringEnteredValue = "0"
         }
     }
 }
